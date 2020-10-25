@@ -1,0 +1,33 @@
+<div class="centrarSection" role="main">
+  <app-header-ocm></app-header-ocm>
+
+  <button *ngIf="!isExpanded" type="button" class="btn btnExpand" (click)="expandAll()">Expandir todo</button>
+  <button *ngIf="isExpanded" type="button" class="btn btnCollapse" (click)="collapseAll()">Colapsar todo</button>
+
+  <ag-grid-angular
+    #agGrid
+    style="width: 100%; height: 90vh; padding-right: 20px; margin-left: 10px"
+    class="ag-theme-balham"
+    [enableSorting]="true"
+    [enableFilter]="true"
+    [rowData]="rowData | async"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef"
+    rowSelection="multiple"
+    [groupSuppressAutoColumn]="true"
+    [groupIncludeFooter]="true"
+    [groupIncludeTotalFooter]="true"
+    [autoGroupColumnDef]="autoGroupColumnDef"
+    [groupHeaderHeight]="groupHeaderHeight"
+    [headerHeight]="headerHeight"
+    [sideBar]="sideBar"
+    [localeText]="localeText"
+    [rowGroupPanelShow]="rowGroupPanelShow"
+    [statusBar]="statusBar"
+    [paginationPageSize]="paginationPageSize"
+    (gridReady)="onGridReady($event)"
+  >
+  </ag-grid-angular>
+
+  <app-footer></app-footer>
+</div>

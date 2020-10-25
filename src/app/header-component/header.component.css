@@ -1,0 +1,39 @@
+.customHeaderMenuButton{
+    margin-top: 5px;
+    margin-left: 4px;
+    float: left;
+}
+
+.customHeaderLabel{
+    margin-left: 0px;
+    margin-top: 3px;
+    float: left;
+    font-size: 9px;
+    color:black;
+    font-weight: bold;
+}
+
+.customSortDownLabel{
+    float: left;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.customSortUpLabel{
+    float: left;
+    margin-left: 3px;
+    margin-top: 4px;
+}
+
+.customSortRemoveLabel{
+    float: left;
+    font-size: 11px;
+    margin-left: 3px;
+    margin-top: 6px;
+}
+
+.active {
+    color: cornflowerblue;
+}
+
+.hidden { display:none; }
